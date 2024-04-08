@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyOCR - {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="dark:bg-gray-900">
+{% include("_navigation.html") %}
+<div class="container mx-auto">
+    <section>
+        <header>
+            {% block header %}
+            {% endblock header %}
+        </header>
+        <main class="text-base leading-loose dark:text-white">            
+            {% block content %}<p>No messages.</p>{% endblock content %}
+        </main>
+    </section>
+</div>
+</body>
+</html>

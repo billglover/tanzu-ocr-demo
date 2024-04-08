@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h2 class="text-5xl font-semibold leading-loose dark:text-white">{% block title %}Home{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+    <p>
+        Learn more about this project by visiting the <a class="underline decoration-indigo-500" href="{{ url_for('pages.about') }}">About page</a>.
+    </p>
+{% endblock content %}
