@@ -1,0 +1,21 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: tanzu-ocr-demo
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    apps.tanzu.vmware.com/has-tests: "true"
+    app.kubernetes.io/part-of: tanzu-ocr-demo
+spec:
+  params:
+    - name: annotations
+      value:
+        autoscaling.knative.dev/minScale: "1"
+    - name: testing_pipeline_matching_labels
+      value:
+        apps.tanzu.vmware.com/language: python
+  source:
+    git:
+      url: https://github.com/billglover/tanzu-ocr-demo
+      ref:
+        branch: main
