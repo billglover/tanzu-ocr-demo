@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h2>{% block title %}Results{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+
+<main class="text-base leading-loose dark:text-white mx-auto block">
+
+<img class="size-1/4" src="{{ url_for('images.send_uploaded_file', filename=result['image']) }}" />
+
+<p class="author">{{ result["author"] }}<p>
+  <table class="table-auto border">
+    <tr>
+      <td class="min-w-80 border py-1 px-4 font-medium">Text</td>
+      <td class="min-w-32 border py-1 px-4 font-medium">Confidence</td>
+      <td class="min-w-32 border py-1 px-4 font-medium">Location</td>
+    </tr>
+    {% for item in result["lines"] %}
+    <tr>
+      <td class="border py-1 px-4 text-sm">{{ item.text }}</td>
+      <td class="border py-1 px-4 text-sm">{{ item.confidence }}</td>
+      <td class="border py-1 px-4 text-sm">location</td>
+    </tr>
+    {% endfor %}
+  </table>
+</main>
+{% endblock content %}
