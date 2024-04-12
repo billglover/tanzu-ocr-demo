@@ -14,8 +14,10 @@ spec:
     - name: testing_pipeline_matching_labels
       value:
         apps.tanzu.vmware.com/language: python
+    - name: dockerfile
+      value: ./Dockerfile
   source:
     git:
       url: https://github.com/billglover/tanzu-ocr-demo
       ref:
-        branch: main
+        branch: dockerfile
