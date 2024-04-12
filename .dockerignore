@@ -1,0 +1,11 @@
+__pycache__
+.git
+.github
+.gitignore
+.dockerignore
+Dockerfile
+Dockerfile-base
+.vscode
+envs
+images
+instance
