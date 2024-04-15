@@ -7,4 +7,4 @@ WORKDIR /app
 COPY . /app
 
 EXPOSE 8080
-CMD ["/usr/local/bin/gunicorn", "--config", "gunicorn_config.py", "wsgi:app"]
+CMD ["/opt/bitnami/python/bin/gunicorn", "--config", "gunicorn_config.py", "wsgi:app"]
