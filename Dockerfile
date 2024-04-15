@@ -1,6 +1,7 @@
 FROM demo.goharbor.io/bglover-vac/easy-ocr-base:latest
 
-USER 0:0
+RUN mkdir /.EasyOCR
+RUN chown 1000:1000 /.EasyOCR
 
 WORKDIR /app
 COPY . /app
