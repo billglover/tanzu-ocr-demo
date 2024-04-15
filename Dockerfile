@@ -1,4 +1,7 @@
 FROM demo.goharbor.io/bglover-vac/easy-ocr-base:latest
+
+USER 0:0
+
 WORKDIR /app
 COPY . /app
 
